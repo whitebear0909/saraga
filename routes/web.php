@@ -120,8 +120,8 @@ Route::get('/','HomeController@index')->name('home');
 // })->name('500');
 
 // //Field
-//Route::get('/field/{slug}','FieldController@detail')->name('field-detail');
-// Route::get('/field/{slug}/court','FieldController@court')->name('select-court');
+Route::get('/field/{slug}','FieldController@detail')->name('field-detail');
+Route::get('/field/{slug}/court','FieldController@court')->name('select-court');
  Route::get('/field/list', function () {
      return view('classimax.category');
  })->name('field-list');
