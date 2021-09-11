@@ -122,14 +122,14 @@ Route::get('/','HomeController@index')->name('home');
 // //Field
 Route::get('/field/{slug}','FieldController@detail')->name('field-detail');
 Route::get('/field/{slug}/court','FieldController@court')->name('select-court');
- Route::get('/field/list', function () {
+Route::get('/field/list', function () {
      return view('classimax.category');
  })->name('field-list');
 
 // Route::get('/promo','PromoController@list')->name('promo-list');
 // Route::get('/promo/{id}','PromoController@detail')->name('promo-detail');
-// Route::get('/events','EventController@list')->name('event-list');
-// Route::get('/event/{id}','EventController@detail')->name('event-detail');
+ Route::get('/events','EventController@list')->name('event-list');
+ Route::get('/event/{id}','EventController@detail')->name('event-detail');
 
 
 // Route::get('/contact-us', function (){
