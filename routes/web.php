@@ -53,26 +53,26 @@ Route::post('/register','LoginController@register')->name('register');
 // });
 
 // //Group Must Logged In.
-// Route::group(['middleware' => ['initial_data']], function() {
-// 	//Profile
-// 	Route::get('/profile', function () {
-// 	    return view('classimax.user-profile');
-// 	})->name('profile');
-// 	Route::get('/profile/edit', function (){
-// 		return view('classimax.edit-profile');
-// 	})->name('edit-profile');
-// 	Route::get('/profile/setting', function (){
-// 		return view('classimax.setting-profile');
-// 	})->name('setting-profile');
+Route::group(['middleware' => ['initial_data']], function() {
+	//Profile
+	Route::get('/profile', function () {
+	    return view('classimax.user-profile');
+	})->name('profile');
+	Route::get('/profile/edit', function (){
+		return view('classimax.edit-profile');
+	})->name('edit-profile');
+	Route::get('/profile/setting', function (){
+		return view('classimax.setting-profile');
+	})->name('setting-profile');
 
-// 	Route::post('/profile/password','ProfileController@change_password')->name('change-password');
-// 	Route::post('/profile/update','ProfileController@update_profile')->name('update-profile');
-// 	Route::post('/profile/update/phone','ProfileController@update_phone')->name('update-phone');
-// 	Route::post('/profile/update/email','ProfileController@update_email')->name('update-email');
-// 	Route::post('/profile/upload/image','ProfileController@upload_image')->name('upload-image');
-// 	Route::get('/profile/password', function () {
-// 	    return view('classimax.user-profile');
-// 	})->name('change-password');
+	Route::post('/profile/password','ProfileController@change_password')->name('change-password');
+	Route::post('/profile/update','ProfileController@update_profile')->name('update-profile');
+	Route::post('/profile/update/phone','ProfileController@update_phone')->name('update-phone');
+	Route::post('/profile/update/email','ProfileController@update_email')->name('update-email');
+	Route::post('/profile/upload/image','ProfileController@upload_image')->name('upload-image');
+	Route::get('/profile/password', function () {
+	    return view('classimax.user-profile');
+	})->name('change-password');
 
 // 	//Favorit
 // 	Route::get('/favorit', 'FieldController@favorit')->name('favorit');
