@@ -79,19 +79,19 @@ Route::post('/register','LoginController@register')->name('register');
 // 	Route::post('ajax/set-favorit', 'FieldController@set_favorit')->name('set-favorit');
 
 // 	//Booking
-// 	Route::post('/booking/confirmation','BookingController@confirmation')->name('booking-confirmation');
+	Route::post('/booking/confirmation','BookingController@confirmation')->name('booking-confirmation');
 	
-// 	Route::post('/booking/create','BookingController@create')->name('booking-create');
-// 	Route::get('/booking', 'BookingController@show')->name('booking-list');
-// 	// Post mode is for midtrans redirect after completing booking payment.
-// 	Route::post('/booking', 'BookingController@show')->name('booking-list');
+	Route::post('/booking/create','BookingController@create')->name('booking-create');
+	Route::get('/booking', 'BookingController@show')->name('booking-list');
+	// Post mode is for midtrans redirect after completing booking payment.
+	Route::post('/booking', 'BookingController@show')->name('booking-list');
 
-// 	Route::get('/booking/{id}', 'BookingController@detail')->name('booking-detail');
-// 	Route::get('/booking/{id}/rating', 'RatingController@show')->name('rating-form');
-// 	Route::post('/booking/rating', 'RatingController@create')->name('create-rating');
+	Route::get('/booking/{id}', 'BookingController@detail')->name('booking-detail');
+	Route::get('/booking/{id}/rating', 'RatingController@show')->name('rating-form');
+	Route::post('/booking/rating', 'RatingController@create')->name('create-rating');
 
-// 	Route::post('/booking/apply','BookingController@apply_coupon')->name('apply-coupon');
-// 	Route::post('/booking/snap', 'BookingController@get_snap_url')->name('booking-snap');
+	Route::post('/booking/apply','BookingController@apply_coupon')->name('apply-coupon');
+	Route::post('/booking/snap', 'BookingController@get_snap_url')->name('booking-snap');
 
 
 // });
