@@ -42,10 +42,10 @@ Route::post('/register','LoginController@register')->name('register');
 // Group Midtrans
 // Route::group(['middleware' => ['api']], function() {
 // 	//Midtrans
-// 	Route::post('/midtrans/notification/handling', 'MidtransController@notification');
-// 	Route::post('/midtrans/finish', 'MidtransController@finish');
-// 	Route::post('/midtrans/unfinish', 'MidtransController@unfinish');
-// 	Route::post('/midtrans/error', 'MidtransController@error');
+Route::post('/midtrans/notification/handling', 'MidtransController@notification');
+Route::post('/midtrans/finish', 'MidtransController@finish');
+Route::post('/midtrans/unfinish', 'MidtransController@unfinish');
+Route::post('/midtrans/error', 'MidtransController@error');
 
 // 	Route::get('/payment/finish', 'BookingController@create')->name('payment-finish');
 // 	Route::get('/payment/pending', 'BookingController@create')->name('payment-pending');
